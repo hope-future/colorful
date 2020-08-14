@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<%- include('components/common/_head.ejs', {page_title: 'トップページ'}) %>
+
+<body class="top">
+
+<%- include('components/common/_header.ejs') %>
+
+
+<section class="section-photo">
+  <div class="section-photo__header">
+    <h2 class="section-photo__heading">色とりどりのキャンディ</h2>
+
+    <p class="section-photo__lead">わたしたちがお届けできるキャンディを紹介します。古今東西のキャンディが揃っています。</p>
+  </div>
+
+  <ul class="section-photo__list">
+    <li class="section-photo__item">
+      <img class="section-photo__image" src="images/candy01.jpg" alt="">
+    </li>
+
+    <li class="section-photo__item">
+      <img class="section-photo__image" src="images/candy02.jpg" alt="">
+    </li>
+
+    <li class="section-photo__item">
+      <img class="section-photo__image" src="images/candy03.jpg" alt="">
+    </li>
+
+    <li class="section-photo__item">
+      <img class="section-photo__image" src="images/candy04.jpg" alt="">
+    </li>
+
+    <li class="section-photo__item">
+      <img class="section-photo__image" src="images/candy05.jpg" alt="">
+    </li>
+
+    <li class="section-photo__item">
+      <img class="section-photo__image" src="images/candy06.jpg" alt="">
+    </li>
+  </ul>
+</section>
+
+
+<%- include('components/common/_footer') %>
+
+<%- include('components/common/_script.ejs') %>
+
+</body>
+</html>

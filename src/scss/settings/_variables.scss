@@ -1,0 +1,58 @@
+// 変数
+
+:root {
+// カラー
+  --color-main: #F26A74;
+  --color-main-light: #FFA5A5;
+  --color-main-dark: #E13845;
+
+  // ダークモードで変更
+  // メインカラーを変更
+  --change-color-main-text: var(--color-main);
+  --change-color-main-switch: var(--color-main);
+  // 背景色
+  --change-bgc: #fff;
+  --change-bgc-trans: rgba(255,255,255,0.6);
+  --change-bgc-check: #FFF7D2;
+  // テキスト
+  --change-color-text: #444;
+  --change-color-text-white: #fff;
+
+  // ダークモード
+  &.dark-mode {
+    --change-color-main-text: var(--color-main-light);
+    --change-color-main-switch: var(--color-main-dark);
+    --change-bgc: #231802;
+    --change-bgc-trans: rgba(35,24,2,0.7);
+    --change-bgc-check: #372A0A;
+    --change-color-text: #EBEBEB;
+    --change-color-text-white: #EBEBEB;
+  }
+
+
+// モード
+  --change-mode: "Light ";
+
+  // ダークモード
+  &.dark-mode {
+    --change-mode: "Dark ";
+  }
+
+
+// トランジション
+  --transition: 0.5s ease-in-out;
+
+
+// 横幅・高さ
+  --change-height-line-white: 100px;
+  --change-height-line-pink: 100px;
+
+  @include breakpoint-min(768px) {
+    --change-height-line-white: 154px;
+    --change-height-line-pink: 120px;
+  }
+}
+
+
+// ブレークポイント
+$breakpoint-md: 768px;

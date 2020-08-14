@@ -55,6 +55,7 @@ https://www.ink-parks.com/mypage/login.php?transactionid=db4f985777f231dd008b07b
 
 シンタックスハイライト
 syntax highlight
+syntax  構文。
 
 ```html
 <div>

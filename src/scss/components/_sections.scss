@@ -1,0 +1,86 @@
+// セクション
+
+// 写真
+.section-photo {
+  padding: 0 25px;
+  background-color: var(--change-bgc-check);
+  background-image: url(../images/check.png);
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: var(--change-height-line-pink);
+    margin: 0 auto;
+    background-color: var(--color-main-light);
+  }
+
+  &__header {
+    max-width: 378px;
+    margin: 0 auto 36px;
+
+    &::before {
+      content: url(../images/candy.svg);
+      display: block;
+      width: 73px;
+      margin: 0 auto 18px;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--color-main);
+  }
+
+  &__lead {
+    font-size: 12px;
+    line-height: 2;
+  }
+
+  &__list {
+    max-width: 467px;
+    margin: 0 auto -15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: calc((100% - 15px) / 2);
+    margin-bottom: 15px;
+  }
+
+  .dark-mode &__image {
+    filter: saturate(0.8) brightness(0.8);
+  }
+
+
+  @include breakpoint-min($breakpoint-md) {
+    &__header {
+      max-width: 567px;
+    }
+
+    &__heading {
+      margin-bottom: 46px;
+      font-size: 25px;
+    }
+
+    &__lead {
+      font-size: 18px;
+    }
+
+    &__list {
+      max-width: 874px;
+      margin: 0 auto -20px;
+    }
+
+    &__item {
+      width: calc((100% - 20px * 2) / 3);
+      margin-bottom: 20px;
+    }
+  }
+}

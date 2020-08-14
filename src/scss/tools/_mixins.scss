@@ -1,0 +1,14 @@
+// ミックスイン
+
+@mixin breakpoint-min($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+
+@mixin breakpoint-max($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}

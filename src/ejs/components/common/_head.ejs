@@ -1,0 +1,25 @@
+<% if (typeof page_title === 'undefined') { %>
+  <% var page_title = '' %>
+<% } %>
+
+<head>
+  <meta charset="utf-8">
+
+  <title>
+    <% if (page_title) { %>
+    <%= page_title %> | からふる
+    <% } else    { %>
+    からふる
+    <% } %>
+  </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="<%= config.description %>">
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <link id="stylesheet" rel="stylesheet" href="css/main.css" type="text/css">
+</head>
