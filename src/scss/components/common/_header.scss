@@ -1,0 +1,142 @@
+// ヘッダー
+
+.header {
+  position: relative;
+  padding: 25px 25px 0;
+
+  // 背景画像
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url(../images/candy.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: var(--transition);
+    animation: fade-in 3s 2s ease-in-out backwards;
+
+    .dark-mode & {
+      filter: saturate(80%) brightness(80%);
+    }
+  }
+
+  &__site {
+    position: relative;
+    border: solid 1px;
+    border-image-source: url(../images/border.svg);
+    border-image-slice: 68;
+    border-image-width: 40px;
+    border-image-outset: 20px;
+    text-align: center;
+
+    // ライン
+    &::after {
+      content: "";
+      display: block;
+      width: 1px;
+      height: var(--change-height-line-white);
+      margin: 0 auto;
+      background-color: #fff;
+    }
+  }
+
+  &__heading {
+    margin: 72px 0 153px;
+  }
+
+  &__catch {
+    color: var(--change-color-text-white);
+    font-weight: bold;
+  }
+
+  &__switch {
+    position: absolute;
+    top: 385px;
+    left: calc(50% - 46px);
+  }
+
+  &__body {
+
+    // ライン
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      width: 1px;
+      height: var(--change-height-line-white);
+      margin: 0 auto;
+      background-color: #fff;
+    }
+  }
+
+  &__body-inner {
+    max-width: 378px;
+    margin: 0 auto;
+    padding: 42px 25px;
+    border-radius: 30px;
+    text-align: center;
+    background-color: var(--change-bgc-trans);
+    transition: var(--transition);
+
+    &::before {
+      content: url(../images/candy.svg);
+      display: block;
+      margin-bottom: 18px;
+    }
+  }
+
+  &__body-heading {
+    margin-bottom: 30px;
+    color: var(--color-main);
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  &__body-text {
+    text-align: left;
+    font-size: 12px;
+    line-height: 2;
+  }
+
+
+  @include breakpoint-min($breakpoint-md) {
+    padding: 44px 44px 0;
+
+    &__site {
+      border-image-width: 68px;
+      border-image-outset: 34px;
+    }
+
+    &__heading {
+      margin: 120px 0;
+    }
+
+    &__catch {
+      font-size: 22px;
+    }
+
+    &__switch {
+      top: 366px;
+      left: calc(50% + 81px);
+    }
+
+    &__body-inner {
+      max-width: 567px;
+      padding: 42px 110px;
+      border-radius: 190px;
+    }
+
+    &__body-heading {
+      margin-bottom: 46px;
+      font-size: 25px;
+    }
+
+    &__body-text {
+      font-size: 18px;
+    }
+  }
+}// .header

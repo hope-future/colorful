@@ -1,0 +1,19 @@
+// SNS
+
+.sns {
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    margin-right: -20px;
+  }
+
+  &__item {
+    margin-right: 20px;
+  }
+
+  &__icon {
+    font-size: 40px;
+    color: var(--change-color-main-text);
+  }
+}

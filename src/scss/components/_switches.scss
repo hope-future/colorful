@@ -1,0 +1,92 @@
+// スイッチ
+
+// オン・オフ
+.onoffswitch {
+  position: relative;
+  width: 75px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.onoffswitch-checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  height: 36px;
+  padding: 0;
+  line-height: 36px;
+  border: 2px solid #f26a74;
+  border-radius: 36px;
+  background-color: #f26a74;
+  transition: background-color 0.3s ease-in;
+}
+
+.onoffswitch-label:before {
+  content: "";
+  display: block;
+  width: 36px;
+  margin: 0px;
+  background: #ffffff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 37px;
+  border: 2px solid #f26a74;
+  border-radius: 36px;
+  transition: all 0.3s ease-in 0s;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label {
+  background-color: #e13845;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label,
+.onoffswitch-checkbox:checked + .onoffswitch-label:before {
+  border-color: #e13845;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label:before {
+  right: 0px;
+}
+
+
+// 追加設定
+.switch {
+
+  &__text {
+    width: 137px;
+    line-height: 51px;
+    border: solid 1px var(--color-main-light);
+    background-color: var(--change-bgc-trans);
+    color: var(--change-color-main-text);
+    font-family: Georgia, serif;
+    font-size: 21px;
+    transform: rotate(-18deg);
+    transition: var(--transition);
+
+    &::before {
+      content: var(--change-mode);
+    }
+  }
+
+  .onoffswitch {
+    position: relative;
+    top: -8px;
+    left: 68px;
+  }
+
+  .onoffswitch-label {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .onoffswitch-checkbox:checked + .onoffswitch-label:before {
+    background-color: rgba(255,255,255,0.8);
+  }
+}

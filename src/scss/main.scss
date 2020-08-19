@@ -1,3 +1,17 @@
-p {
-  color: blue;
-}
+// ミックスイン
+@import "tools/mixins";
+
+// 変数
+@import "settings/*";
+
+// キーフレーム
+@import "tools/_keyframes.scss";
+
+// ベース
+@import "bases/*";
+
+// コンポーネント
+@import "components/*";
+
+// コンポーネント・共通
+@import "components/common/*";
